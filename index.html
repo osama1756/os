@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Question</title>
+<style>
+  body {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+  }
+  button {
+    padding:15px 30px;
+    font-size:20px;
+    margin:10px;
+    cursor:pointer;
+  }
+  #no {
+    position:absolute;
+  }
+</style>
+</head>
+<body>
+
+<h1>Do you love me?</h1>
+
+<button onclick="alert('I knew it 😏')">YES</button>
+<button id="no">NO</button>
+
+<script>
+const noBtn = document.getElementById("no");
+noBtn.addEventListener("mouseover", () => {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 50);
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+});
+</script>
+
+</body>
+</html>
